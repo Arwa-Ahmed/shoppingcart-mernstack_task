@@ -42,11 +42,11 @@ app.use(express.json());
 //image
 app.use(express.static(path.join(__dirname, 'productImage')));
 
-// app.use('/', express.static(path.join(__dirname, 'client/build')));
+app.use('/', express.static(path.join(__dirname, 'client/build')));
 app.use('/users', usersRouter);
 app.use('/order', orderRouter);
-// app.use('/products', productsRouter);
-app.use('/', productsRouter);
+app.use('/products', productsRouter);
+// app.use('/', productsRouter);
 
 
 // catch 404 and forward to error handler
